@@ -237,6 +237,7 @@ img {
 
 /* ===team */
 .team {
+  margin: 0 auto;
 }
 
 .team-container {
@@ -244,7 +245,6 @@ img {
   padding-bottom: 96px;
 
   background-color: #f4f4fd;
-  margin: 0 auto;
 }
 
 .team-title {
@@ -337,6 +337,79 @@ img {
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: #404bbf;
+}
+
+/* ===portfolio */
+.portfolio {
+  margin: 0 auto;
+}
+
+.portfolio-container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
+  background-color: #ffffff;
+}
+
+.portfolio-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+.portfolio-img-wrapper {
+}
+.portfolio-img {
+}
+
+.portfolio-img-dsc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px;
+  background-color: #ffffff;
+
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-img-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-img-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* ===footer */
@@ -577,6 +650,17 @@ img {
     width: calc((100% - 24px) / 2);
   }
 
+  /* ===portfolio */
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+
   /* ===footer */
   .footer-container {
     flex-direction: row;
@@ -675,5 +759,14 @@ img {
 
   .team-list .team-item {
     width: calc((100% - 72px) / 4);
+  }
+
+  /* ===portfolio */
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
   }
 }
