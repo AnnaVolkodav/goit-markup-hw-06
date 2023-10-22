@@ -1018,8 +1018,7 @@ img {
 .modal-btn-form:hover,
 .modal-btn-form:focus {
   background-color: #404bbf;
-} 
-
+}
 
 /* !===ADAPTIVE */
 @media screen and (min-width: 768px) {
