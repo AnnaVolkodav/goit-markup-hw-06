@@ -58,6 +58,13 @@ img {
 /* !===HEADER */
 .header {
   margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -65,17 +72,10 @@ img {
 }
 
 .header-container {
-  padding-top: 16px;
-  padding-bottom: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   position: relative;
 }
 
@@ -102,6 +102,7 @@ img {
   height: 24px;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .header-icon {
@@ -118,7 +119,7 @@ img {
 }
 
 .hidden-header-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -265,25 +266,25 @@ img {
 /* ===hero */
 .hero {
   margin: 0 auto;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background-color: #2e2f42;
 }
 
 .hero-container {
   width: 100%;
   height: 432px;
-  padding-top: 72px;
-  padding-bottom: 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 72px;
 
-  background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/hero/bg-hero-mob-1x.jpg);
+    url(../images/hero/bg-hero-mob-1x.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
@@ -298,7 +299,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/hero/bg-hero-mob-2x.jpg);
+      url(../images/hero/bg-hero-mob-2x.jpg);
   }
 }
 
@@ -344,13 +345,13 @@ img {
 /* ===power */
 .power {
   margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #ffffff;
 }
 
 .power-container {
   width: 100%;
-  padding-top: 96px;
-  padding-bottom: 96px;
-  background-color: #ffffff;
 }
 
 .power-list {
@@ -392,13 +393,12 @@ img {
 /* ===team */
 .team {
   margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #f4f4fd;
 }
 
 .team-container {
-  padding-top: 96px;
-  padding-bottom: 96px;
-
-  background-color: #f4f4fd;
 }
 
 .team-title {
@@ -497,17 +497,16 @@ img {
 .portfolio {
   margin: 0 auto;
   max-width: 1158px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #ffffff;
 }
 
 .portfolio-container {
-  padding-top: 96px;
-  padding-bottom: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-color: #ffffff;
 }
 
 .portfolio-title {
@@ -601,12 +600,13 @@ img {
 /* ===footer */
 .footer {
   margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #2e2f42;
 }
 
 .footer-container {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  background-color: inherit;
 }
 
 .footer-up-wrapper {
@@ -1022,8 +1022,12 @@ img {
 
 /* !===ADAPTIVE */
 @media screen and (min-width: 768px) {
-  .container,
-  .footer {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .container {
     max-width: 768px;
   }
 
@@ -1124,7 +1128,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/hero/bg-hero-tab-1x.jpg);
+      url(../images/hero/bg-hero-tab-1x.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1135,7 +1139,7 @@ img {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(/images/hero/bg-hero-tab-2x.jpg);
+        url(../images/hero/bg-hero-tab-2x.jpg);
     }
   }
 
@@ -1162,8 +1166,8 @@ img {
     align-self: stretch;
   }
 
-  .power-item-text {
-    font-weight: 400;
+  .power-item-title {
+    text-align: left;
   }
 
   /* ===team */
@@ -1250,8 +1254,7 @@ img {
 }
 
 @media screen and (min-width: 1158px) {
-  .container,
-  .footer {
+  .container {
     max-width: 1158px;
   }
 
@@ -1276,7 +1279,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/hero/bg-hero-image-1x.jpg);
+      url(../images/hero/bg-hero-image-1x.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1287,7 +1290,7 @@ img {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(/images/hero/bg-hero-image-2x.jpg);
+        url(../images/hero/bg-hero-image-2x.jpg);
     }
   }
   /* ===power */
@@ -1306,6 +1309,16 @@ img {
 
   .power-item-icon {
     display: flex;
+  }
+
+  .power-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .power-item-text {
+    font-weight: 400;
   }
 
   /* ===team */
@@ -1359,5 +1372,6 @@ img {
 
   .footer-up-wrapper {
     gap: 120px;
+    margin-bottom: 0;
   }
 }
